@@ -1,0 +1,17 @@
+%% Write a program to ask the user to enter:
+%% • First Name
+%% • Last Name
+%% • Has Recommendation
+%% Then Print Full Name on Screen, Leaving a space between the first and last name.
+%% Steps
+%% Step 1: Ask the user to enter (FirstName, LastName)
+%% Step 2: FullName = FirstName + " " + LastName
+%% Step 3: Print FullName
+
+flowchart TD
+    Start([Start])
+    ReadFirstAndLastName[/Read\nFirstName\nLastName/]
+    FullName(FullName = FirstName SecondName)
+    PrintFullName[/Print\nFullName/]
+    End([End])
+    Start --> ReadFirstAndLastName --> FullName --> PrintFullName --> End
