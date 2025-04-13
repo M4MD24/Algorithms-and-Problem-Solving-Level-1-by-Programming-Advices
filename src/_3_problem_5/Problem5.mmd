@@ -1,0 +1,23 @@
+%% Write a program to ask the user to enter his\her:
+%% • age
+%% • Driver Licence
+%% • Has Recommendation
+%% Then Print "Hired" if his\her age is greater than 21 and s/he has a driver licence, Otherwise print "Rejected"
+%% or Hired him\her without conditions
+%% Steps
+%% Step 1: ask the user to enter (Age, Driver Licence)
+%% Step 2: Check if (has recommendation = True) then "Hire" otherwise Complete other conditions
+%% Step 3: Check if (Age > 21 and driver licence = True) then "Hire" otherwise "Reject"
+%% Step 4: Print "Hired" or "Rejected" accordingly
+
+flowchart TD
+    Start([Start])
+    ReadNumber[/Read\nAge,\nHasDriverLicence\nHasRecommendation/]
+    isAcceptedRecommendation{Has Recommendation = True?}
+    isAcceptedAgeAndHasDriverLicence{Age > 21?\nand\nHasDriverLicence = True?}
+    PrintHired[/Print\nHired/]
+    PrintRejected[/Print\nRejected/]
+    End([End])
+    Start --> ReadNumber --> isAcceptedRecommendation -- Yes --> PrintHired --> End
+    isAcceptedRecommendation -- No --> isAcceptedAgeAndHasDriverLicence -- Yes --> PrintHired
+    isAcceptedAgeAndHasDriverLicence -- No --> PrintRejected --> End
