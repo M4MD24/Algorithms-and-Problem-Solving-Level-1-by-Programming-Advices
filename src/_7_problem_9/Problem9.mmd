@@ -1,0 +1,17 @@
+%% Write a program to ask the user to enter:
+%% • Number1
+%% • Number2
+%% • Number3
+%% Then print the sum of entered numbers
+%% Steps
+%% Step 1: Ask the user to enter (Number1, Number2, Number3)
+%% Step 2: Sum = Number1 + Number2 + Number3
+%% Step 3: Print the sum of entered numbers
+
+flowchart TD
+    Start([Start])
+    ReadThreeNumbers[/Read\nNumber1,\nNumber2,\nNumber3/]
+    SumOfThreeNumbers(Sum = Number1 + Number2 + Number3)
+    PrintSum[/Print\nSum/]
+    End([End])
+    Start --> ReadThreeNumbers --> SumOfThreeNumbers --> PrintSum --> End
