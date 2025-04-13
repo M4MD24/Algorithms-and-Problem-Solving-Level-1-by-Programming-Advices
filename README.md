@@ -12,3 +12,4 @@
 3. [Problem 5](src/_3_problem_5)
 4. [Problem 6](src/_4_problem_6)
 5. [Problem 7](src/_5_problem_7)
+6. [Problem 8](src/_6_problem_8)

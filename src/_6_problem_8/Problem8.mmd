@@ -1,0 +1,17 @@
+%% Write a program to ask the user to enter:
+%% • Mark
+%% Then print the "Pass" if mark >= 50, Otherwise print "Fail"
+%% Steps
+%% Step 1: Ask the user to enter (Mark)
+%% Step 2: If Mark >= 50, "Pass", Otherwise "Fail"
+%% Step 3: Print "Pass" or "Fail" accordingly
+
+flowchart TD
+    Start([Start])
+    ReadMark[/Read\nMark/]
+    IsPass{Mark >= 50?}
+    PrintPass[/Print\nPass/]
+    PrintFail[/Print\nFail/]
+    End([End])
+    Start --> ReadMark --> IsPass -- Yes --> PrintPass --> End
+    IsPass -- No --> PrintFail --> End
