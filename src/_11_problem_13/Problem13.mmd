@@ -12,7 +12,7 @@
 
 flowchart TD
     Start([Start])
-    ReadTwoNumbers[/Read\nNumber1,\nNumber2\nNumber3/]
+    ReadThreeNumbers[/Read\nNumber1,\nNumber2\nNumber3/]
     WhoIsBiggerBetweenNumber1AndNumber2{Number1 > Number2?}
     WhoIsBiggerBetweenNumber1AndNumber3{Number1 > Number3?}
     WhoIsBiggerBetweenNumber2AndNumber3{Number2 > Number3?}
@@ -20,7 +20,7 @@ flowchart TD
     PrintNumber2[/Print\nNumber2/]
     PrintNumber3[/Print\nNumber3/]
     End([End])
-    Start --> ReadTwoNumbers --> WhoIsBiggerBetweenNumber1AndNumber2 -- Yes --> WhoIsBiggerBetweenNumber1AndNumber3 -- Yes --> PrintNumber1 --> End
+    Start --> ReadThreeNumbers --> WhoIsBiggerBetweenNumber1AndNumber2 -- Yes --> WhoIsBiggerBetweenNumber1AndNumber3 -- Yes --> PrintNumber1 --> End
     WhoIsBiggerBetweenNumber1AndNumber3 -- No --> PrintNumber3
     WhoIsBiggerBetweenNumber2AndNumber3 -- No --> PrintNumber3 --> End
     WhoIsBiggerBetweenNumber1AndNumber2 -- No --> WhoIsBiggerBetweenNumber2AndNumber3 -- Yes --> PrintNumber2 --> End
