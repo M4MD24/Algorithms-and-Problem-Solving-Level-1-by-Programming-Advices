@@ -1,0 +1,26 @@
+%% Write a program to ask the user to enter:
+%% • Number1
+%% • Number2
+%% • Number3
+%% Then print the Max Number
+%% Steps
+%% Step 1: Ask the user to enter (Number1, Number2, Number3)
+%% Step 2: If Number1 > Number2, Then If Number1 > Number3, Otherwise If Number 2 > Number
+%% Step 3: If Number1 > Number3, Then Number1 is Max, Otherwise Number3 is Max
+%% Step 3: If Number2 > Number3, Then Number2 is Max, Otherwise Number3 is Max
+%% Step 4: Print Max Accordingly
+
+flowchart TD
+    Start([Start])
+    ReadTwoNumbers[/Read\nNumber1,\nNumber2\nNumber3/]
+    WhoIsBiggerBetweenNumber1AndNumber2{Number1 > Number2?}
+    WhoIsBiggerBetweenNumber1AndNumber3{Number1 > Number3?}
+    WhoIsBiggerBetweenNumber2AndNumber3{Number2 > Number3?}
+    PrintNumber1[/Print\nNumber1/]
+    PrintNumber2[/Print\nNumber2/]
+    PrintNumber3[/Print\nNumber3/]
+    End([End])
+    Start --> ReadTwoNumbers --> WhoIsBiggerBetweenNumber1AndNumber2 -- Yes --> WhoIsBiggerBetweenNumber1AndNumber3 -- Yes --> PrintNumber1 --> End
+    WhoIsBiggerBetweenNumber1AndNumber3 -- No --> PrintNumber3
+    WhoIsBiggerBetweenNumber2AndNumber3 -- No --> PrintNumber3 --> End
+    WhoIsBiggerBetweenNumber1AndNumber2 -- No --> WhoIsBiggerBetweenNumber2AndNumber3 -- Yes --> PrintNumber2 --> End
