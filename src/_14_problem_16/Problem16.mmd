@@ -1,0 +1,13 @@
+%% Write a program to calculate rectangle area through diagonal and side area of rectangle and print it on the screen
+%% Steps
+%% Step 1: Ask the user to enter (Side , Diagonal)
+%% Step 2: Area = Side * sqrt(Diagonal^2 - Side^2)
+%% Step 3: Print Area
+
+flowchart TD
+    Start([Start])
+    ReadSideAndDiagonal[/Read\nSide,\nDiagonal/]
+    Area("`Area = **Side** * sqrt(**Diagonal**^2 - **Side**^2)`")
+    PrintArea[/Print\nArea/]
+    End([End])
+    Start --> ReadSideAndDiagonal --> Area --> PrintArea --> End
