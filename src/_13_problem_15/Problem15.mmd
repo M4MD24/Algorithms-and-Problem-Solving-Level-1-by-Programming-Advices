@@ -6,8 +6,8 @@
 
 flowchart TD
     Start([Start])
-    ReadTwoNumbers[/Read\nLength,\nWidth/]
+    ReadLengthAndWidth[/Read\nLength,\nWidth/]
     Area(Area = Length * Width)
     PrintArea[/Print\nArea/]
     End([End])
-    Start --> ReadTwoNumbers --> Area --> PrintArea --> End
+    Start --> ReadLengthAndWidth --> Area --> PrintArea --> End
