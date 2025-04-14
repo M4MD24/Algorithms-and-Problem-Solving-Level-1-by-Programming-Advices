@@ -1,0 +1,18 @@
+%% Write a program to ask the user to enter:
+%% • Number1
+%% • Number2
+%% Then print the Two Numbers, Then swap the two numbers and print them
+%% Steps
+%% Step 1: Ask the user to enter (Number1, Number2)
+%% Step 2: Print Two Numbers
+%% Step 3: TemporaryNumber = Number1, Number1 = Number2, Number2 = TemporaryNumber
+%% Step 4: Print Two Numbers
+
+flowchart TD
+    Start([Start])
+    ReadTwoNumbers[/Read\nNumber1,\nNumber2/]
+    PrintTwoNumbersBeforeSwap[/Print\nNumber1\nNumber2/]
+    SwapTwoNumbersWithTemporaryNumber(TemporaryNumber = Number1\nNumber1 = Number2\nNumber2 = TemporaryNumber)
+    PrintTwoNumbersAfterSwap[/Print\nNumber1\nNumber2/]
+    End([End])
+    Start --> ReadTwoNumbers --> PrintTwoNumbersBeforeSwap --> SwapTwoNumbersWithTemporaryNumber --> PrintTwoNumbersAfterSwap --> End
