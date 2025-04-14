@@ -1,0 +1,18 @@
+%% Write a program to ask the user to enter:
+%% • Number1
+%% • Number2
+%% Then print the Max Number
+%% Steps
+%% Step 1: Ask the user to enter (Number1, Number2)
+%% Step 2: If Number1 > Number2, then Number1 is Max, Otherwise Number2 is Max
+%% Step 2: Print MaximumNumber Accordingly
+
+flowchart TD
+    Start([Start])
+    ReadTwoNumbers[/Read\nNumber1,\nNumber2/]
+    WhoIsBigger{Number1 > Number2?}
+    PrintNumber1[/Print\nNumber1/]
+    PrintNumber2[/Print\nNumber2/]
+    End([End])
+    Start --> ReadTwoNumbers --> WhoIsBigger -- Yes --> PrintNumber1 --> End
+    WhoIsBigger -- No --> PrintNumber2 --> End
