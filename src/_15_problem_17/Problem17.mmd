@@ -1,0 +1,13 @@
+%% Write a program to calculate triangle area then print it on the screen
+%% Steps
+%% Step 1: Ask the user to enter (Base, Height)
+%% Step 2: Area = (1/2 * Base * Height) or (Base / 2 * Height)
+%% Step 3: Print Area
+
+flowchart TD
+    Start([Start])
+    ReadBaseAndHeight[/Read\nBase,\nHeight/]
+    Area("`Area = **Base** / 2 * **Height**`")
+    PrintArea[/Print\nArea/]
+    End([End])
+    Start --> ReadBaseAndHeight --> Area --> PrintArea --> End
