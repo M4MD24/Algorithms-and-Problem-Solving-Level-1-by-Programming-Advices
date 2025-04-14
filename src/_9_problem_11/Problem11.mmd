@@ -1,0 +1,22 @@
+%% Write a program to ask the user to enter:
+%% • Mark1
+%% • Mark2
+%% • Mark3
+%% Then print the average of entered marks, And print "Pass" if average >= 50, Otherwise print "Fail"
+%% Steps
+%% Step 1: Ask the user to enter (Mark1, Mark2, Mark3)
+%% Step 2: Average = (Mark1 + Mark2 + Mark3) / 3
+%% Step 3: If Average >= 50
+%% Step 3: Print "Pass" or "Fail" Accordingly
+
+flowchart TD
+    Start([Start])
+    ReadThreeMarks[/Read\nMark1,\nMark2,\nMark3/]
+    AverageOfThreeMarks("Average = (Mark1 + Mark2 + Mark3) / 3")
+    PrintAverage[/Print\nAverage/]
+    IsPass{Average >= 50?}
+    PrintPass[/Print\nPass/]
+    PrintFail[/Print\nFail/]
+    End([End])
+    Start --> ReadThreeMarks --> AverageOfThreeMarks --> PrintAverage --> IsPass -- Yes --> PrintPass --> End
+    IsPass -- No --> PrintFail --> End
