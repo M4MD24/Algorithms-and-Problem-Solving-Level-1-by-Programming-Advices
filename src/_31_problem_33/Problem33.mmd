@@ -1,0 +1,38 @@
+%% Write a program to ask the user to enter:
+%% • Grade
+%% Then print the grade as follows:
+%% • 90 - 100 Print A
+%% • 80 = 89 Print B
+%% • 70 - 79 Print C
+%% • 60 - 69 Print D
+%% • 50 - 59 Print E
+%% • Otherwise Print Print F
+%% Steps
+%% Step 1: Ask the user to enter Grade
+%% Step 2: If Grade >= 90 and Grade <= 100 Print A
+%% Step 3: If Grade >= 80 and Grade <= 89 Print B
+%% Step 4: If Grade >= 70 and Grade <= 79 Print C
+%% Step 5: If Grade >= 60 and Grade <= 69 Print D
+%% Step 6: If Grade >= 50 and Grade <= 59 Print E Otherwise Print F
+
+flowchart TD
+    Start([Start])
+    ReadGrade[/Read\nGrade/]
+    IsGradeBetween90And100{Grade >= 90\nand\nGrade <= 100}
+    PrintA[/Print\nA/]
+    IsGradeBetween80And89{Grade >= 80\nand\nGrade <= 89}
+    PrintB[/Print\nB/]
+    IsGradeBetween70And79{Grade >= 70\nand\nGrade <= 79}
+    PrintC[/Print\nC/]
+    IsGradeBetween60And69{Grade >= 60\nand\nGrade <= 69}
+    PrintD[/Print\nD/]
+    IsGradeBetween50And59{Grade >= 50\nand\nGrade <= 59}
+    PrintE[/Print\nE/]
+    PrintF[/Print\nF/]
+    End([End])
+    Start --> ReadGrade --> IsGradeBetween90And100 -- Yes --> PrintA --> End
+    IsGradeBetween90And100 -- No --> IsGradeBetween80And89 -- Yes --> PrintB --> End
+    IsGradeBetween80And89 -- No --> IsGradeBetween70And79 -- Yes --> PrintC --> End
+    IsGradeBetween70And79 -- No --> IsGradeBetween60And69 -- Yes --> PrintD --> End
+    IsGradeBetween60And69 -- No --> IsGradeBetween50And59 -- Yes --> PrintE --> End
+    IsGradeBetween50And59 -- No --> PrintF --> End
