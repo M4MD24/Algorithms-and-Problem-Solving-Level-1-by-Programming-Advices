@@ -42,3 +42,4 @@
 33. [Problem 35](src/_33_problem_35)
 34. [Problem 36](src/_34_problem_36)
 35. [Problem 37](src/_35_problem_37)
+36. [Problem 38](src/_36_problem_38)

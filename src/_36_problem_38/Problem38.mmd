@@ -1,0 +1,29 @@
+%% Write a program to read a number and check if it is a prime number or not
+%% Note: Prime Number can only divide on one and on itself
+%% Steps
+%% Step 1: Ask the user to enter (Number)
+%% Step 2: If Number < 2, Then Print "Not Prime"
+%% Step 3: If Number = 2 or Number = 3, Then Print "Prime"
+%% Step 4: If Number mod 2 = 0 or Number mod 3 = 0, Then Print "Not Prime"
+%% Step 5: Counter = 5
+%% Step 6: Recursion Counter <= sqrt(floor(Number)), Then Number mod Counter = 0 Print "Prime", Otherwise Counter = Counter + 2, (from 5 to sqrt(floor(Number)), step 2), Otherwise Print "Prime"
+
+flowchart TD
+    Start([Start])
+    ReadNumber[/Print\nNumber/]
+    IsNumberLessThan2{Number < 2?}
+    IsNumberEqualTo2Or3{Number = 2?\nor\nNumber = 3?}
+    IsNumberModulo2Or3EqualTo0{Number mod 2 = 0?\nor\nNumber mod 3 = 0?}
+    PrintPrime[/Print\nPrime/]
+    PrintNotPrime[/Print\nNot Prime/]
+    Counter(Counter = 5)
+    CounterLessThanAndEqualTo_sqrt_floor_of_number___("`**Counter** <= sqrt(floor(**Number**))?`")
+    IncreaseCounterBy2(Counter = Counter + 2)
+    NumberModuloCounterEqualTo0(Number mod Counter = 0?)
+    End([End])
+    Start --> ReadNumber --> IsNumberLessThan2 -- Yes --> PrintNotPrime
+    IsNumberLessThan2 -- No --> IsNumberEqualTo2Or3 -- Yes --> PrintPrime
+    IsNumberEqualTo2Or3 -- No --> IsNumberModulo2Or3EqualTo0 -- Yes --> PrintNotPrime
+    IsNumberModulo2Or3EqualTo0 -- No --> Counter --> CounterLessThanAndEqualTo_sqrt_floor_of_number___ -- Yes --> NumberModuloCounterEqualTo0 -- Yes --> PrintNotPrime --> End
+    CounterLessThanAndEqualTo_sqrt_floor_of_number___ -- No --> PrintPrime --> End
+    NumberModuloCounterEqualTo0 -- No --> IncreaseCounterBy2 --> CounterLessThanAndEqualTo_sqrt_floor_of_number___
