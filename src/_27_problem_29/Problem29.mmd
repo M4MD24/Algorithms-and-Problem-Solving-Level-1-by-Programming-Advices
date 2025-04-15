@@ -1,0 +1,23 @@
+%% Write a program to print sum even numbers from 1 to TargetNumber
+%% Steps
+%% Step 1: Ask the user to enter TargetNumber
+%% Step 2: SumEvenNumbers = 0
+%% Step 3: Counter = 1
+%% Step 4: Recursion add Counter to SumEvenNumbers if Counter mod 2 = 0, from  1 to TargetNumber
+%% Step 5: Print SumEvenNumbers
+
+flowchart TD
+    Start([Start])
+    ReadTargetNumber[/Read\nTargetNumber/]
+    SumEvenNumbers(SumEvenNumbers = 0)
+    Counter(Counter = 1)
+    IsCounterLessThanAndEqualToTargetNumber{Counter <= TargetNumber?}
+    IsEvenCounter{Counter mod 2 = 0?}
+    AddEvenCounterToSum(SumEvenNumbers = SumEvenNumbers + Counter)
+    IncreaseCounterBy1(Counter = Counter + 1)
+    IncreaseCounterBy2(Counter = Counter + 2)
+    PrintSumEvenNumbers[/Print\nSumEvenNumbers/]
+    End([End])
+    Start --> ReadTargetNumber --> SumEvenNumbers --> Counter --> IsCounterLessThanAndEqualToTargetNumber -- Yes --> IsEvenCounter -- Yes --> AddEvenCounterToSum --> IncreaseCounterBy2 --> IsCounterLessThanAndEqualToTargetNumber
+    IsEvenCounter -- No --> IncreaseCounterBy1 --> IsCounterLessThanAndEqualToTargetNumber
+    IsCounterLessThanAndEqualToTargetNumber -- No --> PrintSumEvenNumbers --> End
