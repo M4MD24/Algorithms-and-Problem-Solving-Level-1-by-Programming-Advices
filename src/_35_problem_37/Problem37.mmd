@@ -1,0 +1,16 @@
+%% Write a program to read numbers from user and sum them, keep reading until the user enters -99 then print the sum on the screen
+%% Steps
+%% Step 1: Ask the user to enter (Number)
+%% Step 2: Sum = 0
+%% Step 3: If Number != -99, Then (Sum = Sum + Number) and go to Step1, Otherwise print Sum
+
+flowchart TD
+    Start([Start])
+    Sum(Sum = 0)
+    ReadNumber[/Read\nNumber/]
+    IsNumberNotEqualTo-99{Number != -99?}
+    IncreaseSum(Sum = Sum + Number)
+    PrintSum[/Print\nSum/]
+    End([End])
+    Start --> Sum --> ReadNumber --> IsNumberNotEqualTo-99 -- Yes --> IncreaseSum --> ReadNumber
+    IsNumberNotEqualTo-99 -- No --> PrintSum --> End
