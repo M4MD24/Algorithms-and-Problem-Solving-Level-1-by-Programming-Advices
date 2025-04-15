@@ -1,0 +1,16 @@
+%% Write a program to numbers from 1 to target number
+%% Steps
+%% Step 1: Ask the user to enter TargetNumber
+%% Step 2: Counter = 1
+%% Step 3: Recursion to print counter from 1 to TargetNumber
+
+flowchart TD
+    Start([Start])
+    ReadTargetNumber[/Read\nTargetNumber/]
+    Counter(Counter = 1)
+    PrintCounter[/Print\nCounter/]
+    IsCounterEqualToTargetNumber{Counter <= TargetNumber?}
+    IncreaseCounter(Counter = Counter + 1)
+    End([End])
+    Start --> ReadTargetNumber --> Counter --> PrintCounter --> IsCounterEqualToTargetNumber -- Yes --> IncreaseCounter --> PrintCounter
+    IsCounterEqualToTargetNumber -- No --> End
