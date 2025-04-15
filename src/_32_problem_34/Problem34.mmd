@@ -1,0 +1,38 @@
+%% Write a program to ask the user to enter:
+%% • TotalSales
+%% The commission is calculated as one percentage * the total sales amount, all you need is to decide which percentage to use of the following:
+%% • > 1M -> Percentage is 5%
+%% • > 500K to 1M -> Percentage is 3%
+%% • > 100K to 500K -> Percentage is 2%
+%% • > 50K to 100K -> Percentage is 1%
+%% • Otherwise -> Percentage is 0%
+%% Steps
+%% Step 1: Ask the user to enter TotalSales
+%% Step 2: Percentage = 0.0
+%% Step 3: If TotalSales > 1M, Then Percentage = 0.05
+%% Step 4: If TotalSales > 500K and TotalSales <= 1M, Then Percentage = 0.03
+%% Step 5: If TotalSales > 100K and TotalSales <= 500K, Then Percentage = 0.02
+%% Step 6: If TotalSales > 50K and TotalSales <= 100K, Then Percentage = 0.01, Otherwise Percentage = 0.0
+%% Step 7: TotalCommission = Percentage * TotalSales
+%% Step 8: Print TotalCommission
+
+flowchart TD
+    Start([Start])
+    ReadTotalSales[/Read\nTotalSales/]
+    IsTotalSalesGreaterThan1M{TotalSales > 1M}
+    PercentageEqual0.05(Percentage = 0.05)
+    IsTotalSalesLessThan500KAndGreaterThanAndEqualTo1M{TotalSales > 500K\nand\nTotalSales <= 1M}
+    PercentageEqual0.03(Percentage = 0.03)
+    IsTotalSalesLessThan100KAndGreaterThanAndEqualTo500M{TotalSales > 100K\nand\nTotalSales <= 500K}
+    PercentageEqual0.02(Percentage = 0.02)
+    IsTotalSalesLessThan50KAndGreaterThanAndEqualTo100K{TotalSales > 50K\nand\nTotalSales <= 100K}
+    PercentageEqual0.01(Percentage = 0.01)
+    PercentageEqual0.0(Percentage = 0.0)
+    TotalCommission(TotalCommission = Percentage * TotalSales)
+    PrintTotalCommission[/Print\nTotalCommission/]
+    End([End])
+    Start --> ReadTotalSales --> Percentage --> IsTotalSalesGreaterThan1M -- Yes --> PercentageEqual0.05 --> TotalCommission
+    IsTotalSalesGreaterThan1M -- No --> IsTotalSalesLessThan500KAndGreaterThanAndEqualTo1M -- Yes --> PercentageEqual0.03 --> TotalCommission
+    IsTotalSalesLessThan500KAndGreaterThanAndEqualTo1M -- No --> IsTotalSalesLessThan100KAndGreaterThanAndEqualTo500M -- Yes --> PercentageEqual0.02 --> TotalCommission
+    IsTotalSalesLessThan100KAndGreaterThanAndEqualTo500M -- No --> IsTotalSalesLessThan50KAndGreaterThanAndEqualTo100K -- Yes --> PercentageEqual0.01 --> TotalCommission
+    IsTotalSalesLessThan50KAndGreaterThanAndEqualTo100K -- No --> PercentageEqual0.0 --> TotalCommission --> PrintTotalCommission --> End
