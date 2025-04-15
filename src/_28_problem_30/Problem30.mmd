@@ -16,8 +16,9 @@ flowchart TD
     Factorial(Factorial = TargetNumber * Counter)
     IsCounterBiggerThan2{Counter >= 2}
     DecreaseCounter(Counter = Counter - 1)
+    IncreaseFactorial(Factorial = Factorial * Counter)
     PrintFactorial[/Print\nFactorial/]
     End([End])
-    Start --> ReadTargetNumber --> IsPositive -- Yes --> Counter --> Factorial --> IsCounterBiggerThan2 -- Yes --> DecreaseCounter --> Factorial
+    Start --> ReadTargetNumber --> IsPositive -- Yes --> Counter --> Factorial --> IsCounterBiggerThan2 -- Yes --> DecreaseCounter --> IncreaseFactorial --> IsCounterBiggerThan2
     IsPositive -- No --> ReadTargetNumber
     IsCounterBiggerThan2 -- No --> PrintFactorial --> End
