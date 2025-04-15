@@ -9,8 +9,8 @@ flowchart TD
     ReadTargetNumber[/Read\nTargetNumber/]
     Counter(Counter = TargetNumber)
     PrintCounter[/Print\nCounter/]
-    IsCounterEqualToTargetNumber{Counter >= 1?}
+    IsCounterBiggerThanAndEqualTo1{Counter >= 1?}
     IncreaseCounter(Counter = Counter - 1)
     End([End])
-    Start --> ReadTargetNumber --> Counter --> PrintCounter --> IsCounterEqualToTargetNumber -- Yes --> IncreaseCounter --> PrintCounter
-    IsCounterEqualToTargetNumber -- No --> End
+    Start --> ReadTargetNumber --> Counter --> PrintCounter --> IsCounterBiggerThanAndEqualTo1 -- Yes --> IncreaseCounter --> PrintCounter
+    IsCounterBiggerThanAndEqualTo1 -- No --> End
