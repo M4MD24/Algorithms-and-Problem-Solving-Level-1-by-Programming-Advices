@@ -36,3 +36,4 @@
 27. [Problem 29](src/_27_problem_29)
 28. [Problem 30](src/_28_problem_30)
 29. [Problem 31](src/_29_problem_31)
+30. [Problem 32](src/_30_problem_32)
