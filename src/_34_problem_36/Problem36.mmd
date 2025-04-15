@@ -1,0 +1,38 @@
+%% Write a program to ask the user to enter:
+%% • Number1
+%% • Number2
+%% • OperationType
+%% Then perform the calculation according to the operation type as follows:
+%% • '+': Add the two numbers
+%% • '-': Subtract the two numbers
+%% • '+': Multiply the two numbers
+%% • '+': Divide the two numbers
+%% Steps
+%% Step 1: Ask the user to enter (Number1, Number2)
+%% Step 2: Ask the user to enter (OperationType)
+%% Step 3: If OperationType = '+', Then Result = Number1 + Number2
+%% Step 4: If OperationType = '-', Then Result = Number1 - Number2
+%% Step 5: If OperationType = '*', Then Result = Number1 * Number2
+%% Step 6: If OperationType = '/', Then Result = Number1 / Number2, Otherwise go to Step2
+%% Step 7: Print Result
+
+flowchart TD
+    Start([Start])
+    ReadNumber1AndNumber2[/Read\nNumber1,\nNumber2/]
+    Result(Result = 0)
+    ReadOperationType[/Read\nOperationType/]
+    IsOperationTypeEqualTo+{OperationType = '+'?}
+    ResultOf+(Result = Number1 + Number2)
+    IsOperationTypeEqualTo-{OperationType = '-'?}
+    ResultOf-(Result = Number1 - Number2)
+    IsOperationTypeEqualTo*{OperationType = '*'?}
+    ResultOf*(Result = Number1 * Number2)
+    IsOperationTypeEqualTo/{OperationType = '/'?}
+    ResultOf/(Result = Number1 / Number2)
+    PrintResult[/Print\nResult/]
+    End([End])
+    Start --> ReadNumber1AndNumber2 --> Result --> ReadOperationType --> IsOperationTypeEqualTo+ -- Yes --> ResultOf+ --> PrintResult
+    IsOperationTypeEqualTo+ -- No --> IsOperationTypeEqualTo- -- Yes --> ResultOf- --> PrintResult
+    IsOperationTypeEqualTo- -- No --> IsOperationTypeEqualTo* -- Yes --> ResultOf* --> PrintResult
+    IsOperationTypeEqualTo* -- No --> IsOperationTypeEqualTo/ -- Yes --> ResultOf/ --> PrintResult
+    IsOperationTypeEqualTo/ -- No --> ReadOperationType --> PrintResult --> End
