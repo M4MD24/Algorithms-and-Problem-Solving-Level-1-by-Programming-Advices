@@ -26,3 +26,4 @@
 17. [Problem 19](src/_17_problem_19)
 18. [Problem 20](src/_18_problem_20)
 19. [Problem 21](src/_19_problem_21)
+20. [Problem 22](src/_20_problem_22)
