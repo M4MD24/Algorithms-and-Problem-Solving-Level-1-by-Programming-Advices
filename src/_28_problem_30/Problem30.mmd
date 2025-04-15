@@ -1,0 +1,23 @@
+%% Write a program to calculate factorial of TargetNumber
+%% Note: User should only enter positive number, other wise reject it and ask to enter again
+%% Steps
+%% Step 1: Ask the user to enter TargetNumber
+%% Step 2: If not(TargetNumber > 0) then go to Step1
+%% Step 3: Counter = TargetNumber - 1
+%% Step 4: Factorial = TargetNumber * Counter
+%% Step 5: Recursion (Factorial = TargetNumber * Counter) if Counter bigger than and equal 2, from TargetNumber to 2
+%% Step 6: Print Factorial
+
+flowchart TD
+    Start([Start])
+    ReadTargetNumber[/Read\nTargetNumber/]
+    IsPositive{TargetNumber > 0?}
+    Counter(Counter = TargetNumber - 1)
+    Factorial(Factorial = TargetNumber * Counter)
+    IsCounterBiggerThan2{Counter >= 2}
+    DecreaseCounter(Counter = Counter - 1)
+    PrintFactorial[/Print\nFactorial/]
+    End([End])
+    Start --> ReadTargetNumber --> IsPositive -- Yes --> Counter --> Factorial --> IsCounterBiggerThan2 -- Yes --> DecreaseCounter --> Factorial
+    IsPositive -- No --> ReadTargetNumber
+    IsCounterBiggerThan2 -- No --> PrintFactorial --> End

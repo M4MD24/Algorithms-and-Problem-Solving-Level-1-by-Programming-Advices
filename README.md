@@ -34,3 +34,4 @@
 25. [Problem 27](src/_25_problem_27)
 26. [Problem 28](src/_26_problem_28)
 27. [Problem 29](src/_27_problem_29)
+28. [Problem 30](src/_28_problem_30)
