@@ -3,7 +3,7 @@
 %% • Exponent
 %% Then print the Number^Exponent
 %% Steps
-%% Step 1: Ask the user to enter Number
+%% Step 1: Ask the user to enter (Number, Exponent)
 %% Step 2: If Number = 0 then Print 0
 %% Step 3: If Exponent = 1 then Print Number
 %% Step 4: Counter = 2
@@ -18,11 +18,11 @@ flowchart TD
     Print0[/Print\n0/]
     IsExponentEqualTo1{Exponent = 1?}
     PrintNumber[/Print\nNumber/]
-    Counter[/Counter = 3/]
-    Power[/Power = Number * Number/]
+    Counter(Counter = 3)
+    Power(Power = Number * Number)
     IsCounterLessThanAndEqualExponent{Counter <= Exponent}
-    IncreasePower[/Power = Power * Number/]
-    IncreaseCounter[/Counter = Counter + 1/]
+    IncreasePower(Power = Power * Number)
+    IncreaseCounter(Counter = Counter + 1)
     PrintPower[/Print\nPower/]
     End([End])
     Start --> ReadNumberAndExponent --> IsNumberEqualTo0 -- Yes --> Print0 --> End
