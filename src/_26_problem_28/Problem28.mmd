@@ -1,0 +1,23 @@
+%% Write a program to print sum odd numbers from 1 to TargetNumber
+%% Steps
+%% Step 1: Ask the user to enter TargetNumber
+%% Step 2: SumOddNumbers = 0
+%% Step 3: Counter = 1
+%% Step 4: Recursion add Counter to SumOddNumbers if Counter mod 2 != 0, from TargetNumber to 1
+%% Step 5: Print SumOddNumbers
+
+flowchart TD
+    Start([Start])
+    ReadTargetNumber[/Read\nTargetNumber/]
+    SumOddNumbers(SumOddNumbers = 0)
+    Counter(Counter = 1)
+    IsCounterLessThanAndEqualToTargetNumber{Counter <= TargetNumber?}
+    IsOddCounter{Counter mod 2 != 0?}
+    AddOddCounterToSum(SumOddNumbers = SumOddNumbers + Counter)
+    IncreaseCounterBy1(Counter = Counter + 1)
+    IncreaseCounterBy2(Counter = Counter + 2)
+    PrintSumOddNumbers[/Print\nSumOddNumbers/]
+    End([End])
+    Start --> ReadTargetNumber --> SumOddNumbers --> Counter --> IsCounterLessThanAndEqualToTargetNumber -- Yes --> IsOddCounter -- Yes --> AddOddCounterToSum --> IncreaseCounterBy2 --> IsCounterLessThanAndEqualToTargetNumber
+    IsOddCounter -- No --> IncreaseCounterBy1 --> IsCounterLessThanAndEqualToTargetNumber
+    IsCounterLessThanAndEqualToTargetNumber -- No --> PrintSumOddNumbers --> End
