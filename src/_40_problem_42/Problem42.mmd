@@ -1,0 +1,20 @@
+%% Write a program to calculate the task duration in seconds and print it on screen
+%% Given the time duration of a task in the number of days, hours, minutes and seconds
+%% Steps
+%% Step 1: Ask the user to enter (Days, Hours, Minutes and Seconds)
+%% Step 2: SecondsInMinutes = Minutes * 60
+%% Step 3: SecondsInHours = Hours * 60 * 60
+%% Step 4: SecondsInDays = Days * 24 * 60 * 60
+%% Step 5: TotalSeconds = Seconds + SecondsInMinutes + SecondsInHours + SecondsInDays
+%% Step 6: Print TotalSeconds
+
+flowchart TD
+    Start([Start])
+    Read_Days,Hours,Minutes,Seconds[/Read\nDays,\nHours,\nMinutes,\nSeconds/]
+    SecondsInMinutes(SecondsInMinutes = Minutes * 60)
+    SecondsInHours(SecondsInHours = Hours * 60 * 60)
+    SecondsInDays(SecondsInDays = Days * 24 * 60 * 60)
+    TotalSeconds(TotalSeconds = Seconds + SecondsInMinutes + SecondsInHours + SecondsInDays)
+    PrintTotalSeconds[/Print\nTotalSeconds/]
+    End([End])
+    Start --> Read_Days,Hours,Minutes,Seconds --> SecondsInMinutes --> SecondsInHours --> SecondsInDays --> TotalSeconds --> PrintTotalSeconds --> End
