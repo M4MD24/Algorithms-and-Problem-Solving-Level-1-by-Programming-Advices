@@ -2,19 +2,19 @@
 %% Given the time duration of a task in the number of days, hours, minutes and seconds
 %% Steps
 %% Step 1: Ask the user to enter (Days, Hours, Minutes and Seconds)
-%% Step 2: SecondsInMinutes = Minutes * 60
-%% Step 3: SecondsInHours = Hours * 60 * 60
-%% Step 4: SecondsInDays = Days * 24 * 60 * 60
-%% Step 5: TotalSeconds = Seconds + SecondsInMinutes + SecondsInHours + SecondsInDays
+%% Step 2: SecondsOfMinutes = Minutes * 60
+%% Step 3: SecondsOfHours = Hours * 60 * 60
+%% Step 4: SecondsOfDays = Days * 24 * 60 * 60
+%% Step 5: TotalSeconds = Seconds + SecondsOfMinutes + SecondsOfHours + SecondsOfDays
 %% Step 6: Print TotalSeconds
 
 flowchart TD
     Start([Start])
     Read_Days,Hours,Minutes,Seconds[/Read\nDays,\nHours,\nMinutes,\nSeconds/]
-    SecondsInMinutes(SecondsInMinutes = Minutes * 60)
-    SecondsInHours(SecondsInHours = Hours * 60 * 60)
-    SecondsInDays(SecondsInDays = Days * 24 * 60 * 60)
-    TotalSeconds(TotalSeconds = Seconds + SecondsInMinutes + SecondsInHours + SecondsInDays)
+    SecondsOfMinutes(SecondsOfMinutes = Minutes * 60)
+    SecondsOfHours(SecondsOfHours = Hours * 60 * 60)
+    SecondsOfDays(SecondsOfDays = Days * 24 * 60 * 60)
+    TotalSeconds(TotalSeconds = Seconds + SecondsOfMinutes + SecondsOfHours + SecondsOfDays)
     PrintTotalSeconds[/Print\nTotalSeconds/]
     End([End])
-    Start --> Read_Days,Hours,Minutes,Seconds --> SecondsInMinutes --> SecondsInHours --> SecondsInDays --> TotalSeconds --> PrintTotalSeconds --> End
+    Start --> Read_Days,Hours,Minutes,Seconds --> SecondsOfMinutes --> SecondsOfHours --> SecondsOfDays --> TotalSeconds --> PrintTotalSeconds --> End
