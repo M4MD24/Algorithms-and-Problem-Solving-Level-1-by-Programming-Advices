@@ -1,0 +1,16 @@
+%% Write a program to print all letters from A to Z
+%% Steps
+%% Step 1: Counter = 65
+%% Step 2: If Counter < 91
+%% Step 3: Print Counter as Character and Counter = Counter + 1 and go to Step 2
+
+flowchart TD
+    Start([Start])
+    Counter(Counter = 65)
+    IsCounterLessThan91{Counter < 91?}
+    PrintCounter[/"`Print
+    Char(**Counter**)`"/]
+    IncreaseCounter(Counter = Counter + 1)
+    End([End])
+    Start --> Counter --> PrintCounter --> IncreaseCounter --> IsCounterLessThan91 -- Yes --> PrintCounter
+    IsCounterLessThan91 -- No --> End
