@@ -1,0 +1,73 @@
+%% Write a program to ask the user to enter:
+%% • Month
+%% Then print the month as follows:
+%% • 1 Print
+%% • 2 Print
+%% • 3 Print
+%% • 4 Print
+%% • 5 Print
+%% • 6 Print
+%% • 7 Print
+%% • 8 Print
+%% • 9 Print
+%% • 10 Print
+%% • 11 Print
+%% • 12 Print
+%% Otherwise print "Wrong Value" and ask the use to enter the day again
+%% Steps
+%% Step 1: Ask the user to enter Month
+%% Step 2: If not(Month >= 1 and Month <= 12) Then "Wrong Value" and go to Step1
+%% Step 3: If Month = 1 Then Print Muharram
+%% Step 4: If Month = 2 Then Print Safar
+%% Step 5: If Month = 3 Then Print Rabi Al-Awwal
+%% Step 6: If Month = 4 Then Print Rabi Al-Thani
+%% Step 7: If Month = 5 Then Print Jumada Al-Awwal
+%% Step 8: If Month = 6 Then Print Jumada Al-Thani
+%% Step 9: If Month = 7 Then Print Rajab
+%% Step 10: If Month = 8 Then Print Sha'ban
+%% Step 11: If Month = 9 Then Print Ramadan
+%% Step 12: If Month = 10 Then Print Shawwal
+%% Step 13: If Month = 11 Then Print Dhul-Qi'dah, Otherwise Print Dhul-Hijjah
+
+flowchart TD
+    Start([Start])
+    ReadMonth[/Read\nMonth/]
+    IsMonth{Month >= 1?\nand\nMonth <= 12?}
+    IsMonth1{Month = 1?}
+    PrintMuharram(Print\nMuharram)
+    IsMonth2{Month = 2?}
+    PrintSafar(Print\nSafar)
+    IsMonth3{Month = 3?}
+    PrintRabiAwwal(Print\nRabi Al-Awwal)
+    IsMonth4{Month = 4?}
+    PrintRabiThani(Print\nRabi Al-Thani)
+    IsMonth5{Month = 5?}
+    PrintJumadaAwwal(Print\nJumada Al-Awwal)
+    IsMonth6{Month = 6?}
+    PrintJumadaThani(Print\nJumada Al-Thani)
+    IsMonth7{Month = 7?}
+    PrintRajab(Print\nRajab)
+    IsMonth8{Month = 8?}
+    PrintShaban(Print\nSha'ban)
+    IsMonth9{Month = 9?}
+    PrintRamadan(Print\nRamadan)
+    IsMonth10{Month = 10?}
+    PrintShawwal(Print\nShawwal)
+    IsMonth11{Month = 11?}
+    PrintDhulQidah(Print\nDhul-Qi'dah)
+    PrintDhulHijjah(Print\nDhul-Hijjah)
+    PrintWrongValue(Print\nWrong Value)
+    End([End])
+    Start --> ReadMonth --> IsMonth -- No --> PrintWrongValue --> ReadMonth
+    IsMonth -- Yes --> IsMonth1 -- Yes --> PrintMuharram --> End
+    IsMonth1 -- No --> IsMonth2 -- Yes --> PrintSafar --> End
+    IsMonth2 -- No --> IsMonth3 -- Yes --> PrintRabiAwwal --> End
+    IsMonth3 -- No --> IsMonth4 -- Yes --> PrintRabiThani --> End
+    IsMonth4 -- No --> IsMonth5 -- Yes --> PrintJumadaAwwal --> End
+    IsMonth5 -- No --> IsMonth6 -- Yes --> PrintJumadaThani --> End
+    IsMonth6 -- No --> IsMonth7 -- Yes --> PrintRajab --> End
+    IsMonth7 -- No --> IsMonth8 -- Yes --> PrintShaban --> End
+    IsMonth8 -- No --> IsMonth9 -- Yes --> PrintRamadan --> End
+    IsMonth9 -- No --> IsMonth10 -- Yes --> PrintShawwal --> End
+    IsMonth10 -- No --> IsMonth11 -- Yes --> PrintDhulQidah --> End
+    IsMonth11 -- No --> PrintDhulHijjah --> End
