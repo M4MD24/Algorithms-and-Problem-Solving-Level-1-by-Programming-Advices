@@ -1,0 +1,30 @@
+%% Write a program that inputs the number of seconds and changes it to days, hours, minutes and seconds
+%% Steps
+%% Step  1: Ask the user to TotalSeconds
+%% Step  2: SecondsPerDay = 60 * 60 * 24
+%% Step  3: SecondsPerHour = 60 * 60
+%% Step  4: SecondsPerMinute = 60
+%% Step  5: DaysOfSeconds = Floor(TotalSeconds / SecondsPerDay)
+%% Step  6: Remainder = TotalSeconds mod SecondsPerDay
+%% Step  7: HoursOfSeconds = Floor(Remainder / SecondsPerHour)
+%% Step  8: Remainder = Remainder mod SecondsPerHour
+%% Step  9: MinutesOfSeconds = Floor(Remainder / SecondsPerMinute)
+%% Step 10: Remainder = Remainder mod SecondsPerMinute
+%% Step 11: Print DaysOfSeconds:HoursOfSeconds:MinutesOfSeconds:Remainder
+
+flowchart TD
+    Start([Start])
+    ReadTotalSeconds(Read\nTotalSeconds)
+    SecondsPerDay(SecondsPerDay = 60 * 60 * 24)
+    SecondsPerHour(SecondsPerHour = 60 * 60)
+    SecondsPerMinute(SecondsPerMinute = 60)
+    DaysOfSeconds("`DaysOfSeconds = Floor(**TotalSeconds** / **SecondsPerDay**`")
+    DaysOfSecondsRemainder(Remainder = TotalSeconds mod SecondsPerDay)
+    HoursOfSeconds("`HoursOfSeconds = Floor(**Remainder** / **SecondsPerHour**`")
+    HoursOfSecondsRemainder(Remainder = Remainder mod SecondsPerHour)
+    MinutesOfSeconds("`MinutesOfSeconds = Floor(**Remainder** / **SecondsPerMinute**`")
+    MinutesOfSecondsRemainder(Remainder = Remainder mod SecondsPerMinute)
+    PrintDaysOfSeconds:HoursOfSeconds:MinutesOfSeconds:Remainder[/"`Print
+    **DaysOfSeconds**:**HoursOfSeconds**:**MinutesOfSeconds**:**Remainder**`"/]
+    End([End])
+    Start --> ReadTotalSeconds --> SecondsPerDay --> SecondsPerHour --> SecondsPerMinute --> DaysOfSeconds --> DaysOfSecondsRemainder --> HoursOfSeconds --> HoursOfSecondsRemainder --> MinutesOfSeconds --> MinutesOfSecondsRemainder --> PrintDaysOfSeconds:HoursOfSeconds:MinutesOfSeconds:Remainder --> End
