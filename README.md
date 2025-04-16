@@ -48,3 +48,4 @@
 39. [Problem 41](src/_39_problem_41)
 40. [Problem 42](src/_40_problem_42)
 41. [Problem 43](src/_41_problem_43)
+42. [Problem 44](src/_42_problem_44)

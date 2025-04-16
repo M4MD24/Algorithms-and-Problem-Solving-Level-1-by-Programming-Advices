@@ -1,0 +1,48 @@
+%% Write a program to ask the user to enter:
+%% • Day
+%% Then print the day as follows:
+%% • 1 Print Saturday
+%% • 2 Print Sunday
+%% • 3 Print Monday
+%% • 4 Print Tuesday
+%% • 5 Print Wednesday
+%% • 6 Print Thursday
+%% • 7 Print Friday
+%% Otherwise print "Wrong Value" and ask the use to enter the day again
+%% Steps
+%% Step 1: Ask the user to enter Day
+%% Step 2: If not(Day >= 1 and Day <= 7) Then "Wrong Value" and go to Step1
+%% Step 3: If Day = 1 Then Print Saturday
+%% Step 4: If Day = 2 Then Print Sunday
+%% Step 5: If Day = 3 Then Print Monday
+%% Step 6: If Day = 4 Then Print Tuesday
+%% Step 7: If Day = 5 Then Print Wednesday
+%% Step 8: If Day = 6 Then Print Thursday, Otherwise Print Friday
+
+flowchart TD
+    Start([Start])
+    ReadDay[/Read\nDay/]
+    IsDay{Day >= 1?\nand\nDay <= 7?}
+    IsDayEqualTo1{Day = 1?}
+    PrintSaturday(Print\nSaturday)
+    IsDayEqualTo2{Day = 2?}
+    PrintSunday(Print\nSunday)
+    IsDayEqualTo3{Day = 3?}
+    PrintMonday(Print\nMonday)
+    IsDayEqualTo4{Day = 4?}
+    PrintTuesday(Print\nTuesday)
+    IsDayEqualTo5{Day = 5?}
+    PrintWednesday(Print\nWednesday)
+    IsDayEqualTo6{Day = 6?}
+    PrintThursday(Print\nThursday)
+    PrintFriday(Print\nFriday)
+    PrintWrongValue(Print\nWrong Value)
+    End([End])
+    Start --> ReadDay --> IsDay -- Yes --> IsDayEqualTo1 -- Yes --> PrintSaturday --> End
+    IsDayEqualTo1 -- No --> IsDayEqualTo2 -- Yes --> PrintSunday --> End
+    IsDayEqualTo2 -- No --> IsDayEqualTo3 -- Yes --> PrintMonday --> End
+    IsDayEqualTo3 -- No --> IsDayEqualTo4 -- Yes --> PrintTuesday --> End
+    IsDayEqualTo4 -- No --> IsDayEqualTo5 -- Yes --> PrintWednesday --> End
+    IsDayEqualTo5 -- No --> IsDayEqualTo6 -- Yes --> PrintThursday --> End
+    IsDayEqualTo6 -- No --> PrintFriday --> End
+    IsDay -- No --> PrintWrongValue --> ReadDay
