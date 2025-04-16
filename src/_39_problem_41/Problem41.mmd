@@ -1,0 +1,16 @@
+%% Write a program to read a number of hours and calculates the number of weeks, and days included in that number
+%% Steps
+%% Step 1: Ask the user to enter Hours
+%% Step 2: Days = Hours / 24
+%% Step 3: Weeks = Days / 7
+%% Step 4: Print Weeks
+%% Step 5: Print Days
+
+flowchart TD
+    Start([Start])
+    ReadHours[/Read\nHours/]
+    Days(Days = Hours / 24)
+    Weeks(Weeks = Days / 7)
+    PrintWeeksAndDays[/Print\nWeeks\nDays/]
+    End([End])
+    Start --> ReadHours --> Days --> Weeks --> PrintWeeksAndDays --> End
