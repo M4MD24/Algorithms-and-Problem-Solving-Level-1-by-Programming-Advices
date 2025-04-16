@@ -58,8 +58,7 @@ flowchart TD
     PrintDhulHijjah(Print\nDhul-Hijjah)
     PrintWrongValue(Print\nWrong Value)
     End([End])
-    Start --> ReadMonth --> IsMonth -- No --> PrintWrongValue --> ReadMonth
-    IsMonth -- Yes --> IsMonth1 -- Yes --> PrintMuharram --> End
+    Start --> ReadMonth --> IsMonth -- Yes --> IsMonth1 -- Yes --> PrintMuharram --> End
     IsMonth1 -- No --> IsMonth2 -- Yes --> PrintSafar --> End
     IsMonth2 -- No --> IsMonth3 -- Yes --> PrintRabiAwwal --> End
     IsMonth3 -- No --> IsMonth4 -- Yes --> PrintRabiThani --> End
@@ -71,3 +70,4 @@ flowchart TD
     IsMonth9 -- No --> IsMonth10 -- Yes --> PrintShawwal --> End
     IsMonth10 -- No --> IsMonth11 -- Yes --> PrintDhulQidah --> End
     IsMonth11 -- No --> PrintDhulHijjah --> End
+    IsMonth -- No --> PrintWrongValue --> ReadMonth
