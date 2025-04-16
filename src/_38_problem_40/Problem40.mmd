@@ -1,0 +1,20 @@
+%% A restaurant charges 10% services fee and 16% sales tax
+%% Write a program to read a bill value and add service fee and sales tax to it, and print the TotalBill on the screen
+%% Steps
+%% Step 1: Ask the user to enter BillValue
+%% Step 2: ChargesServices = 0.1
+%% Step 3: SalesTax = 0.16
+%% Step 4: TotalBill = BillValue * (1 + ChargesServices)
+%% Step 5: TotalBill = TotalBill * (1 + SalesTax)
+%% Step 6: Print TotalBill
+
+flowchart TD
+    Start([Start])
+    ReadTotalBillAndCashPaid[/Read\nBillValue/]
+    ChargesServices(ChargesServices = 0.1)
+    SalesTax(SalesTax = 0.16)
+    AddChargesServicesToTotalBill("`TotalBill = **BillValue** * (1 + **ChargesServices**)`")
+    AddSalesTaxToTotalBill("`TotalBill = **TotalBill** * (1 + **SalesTax**)`")
+    PrintTotalBill[/Print\nTotalBill/]
+    End([End])
+    Start --> ReadTotalBillAndCashPaid --> ChargesServices --> SalesTax --> AddChargesServicesToTotalBill --> AddSalesTaxToTotalBill --> PrintTotalBill --> End
