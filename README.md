@@ -51,3 +51,4 @@
 42. [Problem 44](src/_42_problem_44)
 43. [Problem 45](src/_43_problem_45)
 44. [Problem 46](src/_44_problem_46)
+45. [Problem 47](src/_45_problem_47)
