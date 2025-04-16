@@ -1,0 +1,13 @@
+%% Write a program to read a total bill and cash paid and calculate the remainder to be paid back
+%% Steps
+%% Step 1: Ask the user to enter (TotalBill, CashPaid)
+%% Step 2: Remainder = CashPaid - TotalBill
+%% Step 3: PrintRemainder
+
+flowchart TD
+    Start([Start])
+    ReadTotalBillAndCashPaid[/Read\nTotalBill,\nCashPaid/]
+    Remainder(Remainder = CashPaid - TotalBill)
+    PrintRemainder[/Print\nRemainder/]
+    End([End])
+    Start --> ReadTotalBillAndCashPaid --> Remainder --> PrintRemainder --> End
