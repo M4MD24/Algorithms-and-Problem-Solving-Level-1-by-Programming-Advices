@@ -6,10 +6,11 @@
 
 flowchart TD
     Start([Start])
-    ReadATM_PIN_Code[/Print\nATM_PIN_Code/]
+    ReadATM_PIN_Code[/Read\nATM_PIN_Code/]
     IsATM_PIN_CodeAccepted{If ATM_PIN_Code = 1234?}
     Balance(Balance = 7500)
+    PrintWrongPIN[/Print\nWrong PIN/]
     PrintBalance[/Print\nBalance/]
     End([End])
     Start --> ReadATM_PIN_Code --> IsATM_PIN_CodeAccepted -- Yes --> Balance --> PrintBalance --> End
-    IsATM_PIN_CodeAccepted -- No --> ReadATM_PIN_Code
+    IsATM_PIN_CodeAccepted -- No --> PrintWrongPIN --> ReadATM_PIN_Code
