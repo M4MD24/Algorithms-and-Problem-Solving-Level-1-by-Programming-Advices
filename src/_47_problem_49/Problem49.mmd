@@ -1,0 +1,15 @@
+%% Write a program to read the ATM PIN code from the user, Then check if PIN Code = 1234, Then show the balance to user, Otherwise print "Wrong PIN" and ask the user to enter the PIN again
+%% Assume user balance is 7500
+%% Steps
+%% Step 1: read the ATM_PIN_Code
+%% Step 2: If ATM_PIN_Code = 1234?, Then show the balance, Otherwise print "Wrong PIN" and go to Step1
+
+flowchart TD
+    Start([Start])
+    ReadATM_PIN_Code[/Print\nATM_PIN_Code/]
+    IsATM_PIN_CodeAccepted{If ATM_PIN_Code = 1234?}
+    Balance(Balance = 7500)
+    PrintBalance[/Print\nBalance/]
+    End([End])
+    Start --> ReadATM_PIN_Code --> IsATM_PIN_CodeAccepted -- Yes --> Balance --> PrintBalance --> End
+    IsATM_PIN_CodeAccepted -- No --> ReadATM_PIN_Code
