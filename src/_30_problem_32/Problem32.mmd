@@ -16,6 +16,8 @@ flowchart TD
     ReadNumberAndExponent[/Read\nNumber,\nExponent/]
     IsNumberEqualTo0{Number = 0?}
     Print0[/Print\n0/]
+    IsExponentEqualTo0{Exponent = 0?}
+    Print1[/Print\n1/]
     IsExponentEqualTo1{Exponent = 1?}
     PrintNumber[/Print\nNumber/]
     Counter(Counter = 3)
@@ -26,6 +28,7 @@ flowchart TD
     PrintPower[/Print\nPower/]
     End([End])
     Start --> ReadNumberAndExponent --> IsNumberEqualTo0 -- Yes --> Print0 --> End
-    IsNumberEqualTo0 -- No --> IsExponentEqualTo1 -- Yes --> PrintNumber --> End
+    IsNumberEqualTo0 -- No --> IsExponentEqualTo0 -- Yes --> Print1 --> End
+    IsExponentEqualTo0 -- No --> IsExponentEqualTo1 -- Yes --> PrintNumber --> End
     IsExponentEqualTo1 -- No --> Counter --> Power --> IsCounterLessThanAndEqualExponent -- Yes --> IncreasePower --> IncreaseCounter --> IsCounterLessThanAndEqualExponent
     IsCounterLessThanAndEqualExponent -- No --> PrintPower --> End
