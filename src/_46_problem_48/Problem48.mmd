@@ -1,12 +1,12 @@
 %% Write a program to read a loan Amount and ask you how many months you need to settle the loan, Then calculate the monthly installment amount
 %% Steps
 %% Step 1: Read a LoanAmount, Months
-%% Step 2: Print Ceil(LoanAmount / MonthlyPayment)
+%% Step 2: Print LoanAmount / Months
 
 flowchart TD
     Start([Start])
-    ReadLoanAmount[/Read\nLoanAmount,\nMonths/]
+    ReadLoanAmountAndMonths[/Read\nLoanAmount,\nMonths/]
     PrintMonthlyPayment[/"`Print
-    **LoanAmount** / **MonthlyPayment**`"/]
+    **LoanAmount** / **Months**`"/]
     End([End])
-    Start --> ReadLoanAmount --> PrintMonthlyPayment --> End
+    Start --> ReadLoanAmountAndMonths --> PrintMonthlyPayment --> End
