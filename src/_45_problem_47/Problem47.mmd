@@ -1,12 +1,12 @@
 %% Write a program to read a loan Amount and monthly payment and calculate how many months you need to settle the loan
 %% Steps
-%% Step 1: Read a MonthlyPayment and LoanAmount
-%% Step 2: Print Ceil(MonthlyPayment / LoanAmount)
+%% Step 1: Read a LoanAmount and MonthlyPayment
+%% Step 2: Print Ceil(LoanAmount / MonthlyPayment)
 
 flowchart TD
     Start([Start])
-    ReadMonthlyPaymentAndLoanAmount[/Read\nMonthlyPayment,\nLoanAmount/]
+    ReadLoanAmountAndMonthlyPayment[/Read\nLoanAmount,\nMonthlyPayment/]
     PrintMonthsRequired[/"`Print
-    Ceil(**MonthlyPayment** / **LoanAmount**)`"/]
+    Ceil(**LoanAmount** / **MonthlyPayment**)`"/]
     End([End])
-    Start --> ReadMonthlyPaymentAndLoanAmount --> PrintMonthsRequired --> End
+    Start --> ReadLoanAmountAndMonthlyPayment --> PrintMonthsRequired --> End
